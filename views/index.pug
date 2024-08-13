@@ -1,0 +1,232 @@
+extends layout
+
+block content
+  .table
+    include includes/alert.pug
+    include includes/turn.pug
+    include includes/playerInfo.pug
+    include includes/chat.pug
+    include includes/playersInformation.pug
+    .board
+      img(src='https://img.freepik.com/free-photo/white-textured-concrete_125540-1826.jpg?w=2000' width='990' height='990' style='position: absolute;opacity: 0.3;z-index: 1;')
+      .center
+        //- h1.title(style='background-color: #f50c2b;color: #fafaf8;padding-left: 13px;padding-right: 5px;text-shadow: -7px 7px #000000;') YLOPONOM
+        include includes/chancecard.pug
+        include includes/property.pug
+        include includes/dice.pug
+      #field-0.space.corner.go
+        .container
+          .instructions Collect $200.00 salary as you pass here
+          .go-word go
+        .arrow.fa.fa-long-arrow-left
+      .row.horizontal-row.bottom-row
+        #field-9.space.property
+          .container
+            .color-bar.light-blue
+            .name.long-name Amager Strandpark
+            .price 600 DKK
+        #field-8.space.property
+          .container
+            .color-bar.light-blue
+            .name.long-name Flyvergrillen
+            .price 600 DKK
+        #field-7.space.chance
+          .container
+            .name Chance
+            i.drawing.fa.fa-question
+        #field-6.space.property
+          .container
+            .color-bar.light-blue
+            .name Islands Brygge
+            .price 600 DKK
+        #field-5.space.railroad
+          .container
+            .name 5C
+            i.drawing.fa.fa-subway
+            .price 2500 DKK
+        #field-4.space.chance
+          .container
+            .name Chance
+            i.drawing.fa.fa-question
+        #field-3.space.property
+          .container
+            .color-bar.dark-purple
+            .name Frederiksberg
+            .price 3000 DKK
+        #field-2.space.chance
+          .container
+            .name Chance
+            i.drawing.fa.fa-question
+        #field-1.space.property
+          .container
+            .color-bar.dark-purple
+            .name Oesterbro
+            .price 2500 DKK
+      #field-10.space.corner.jail
+        .just Just
+        .drawing
+          .container
+            .name In
+            .window
+              .bar
+              .bar
+              .bar
+              i.person.fa.fa-frown-o
+            .name Jail
+          .visiting Visiting
+        .container
+      .row.vertical-row.left-row
+        #field-19.space.property
+          .container
+            .color-bar.orange
+            .name Aarhus
+            .price 500 DKK
+        #field-18.space.property
+          .container
+            .color-bar.orange
+            .name Aalborg
+            .price 500 DKK
+        #field-17.space.chance
+          .container
+            .name Chance
+            i.drawing.fa.fa-question
+        #field-16.space.property
+          .container
+            .color-bar.orange
+            .name Ringkoebing
+            .price 500 DKK
+        #field-15.space.railroad
+          .container
+            .name 18'eren
+            i.drawing.fa.fa-subway
+            .price 2500 DKK
+        #field-14.space.property
+          .container
+            .color-bar.purple
+            .name Jespers Torvekoekken
+            .price 750 DKK
+        #field-13.space.property
+          .container
+            .color-bar.purple
+            .name Slusen
+            .price 750 DKK
+        #field-12.space.railroad
+          .container
+            .name Sydhavn Station
+            i.drawing.fa.fa-lightbulb-o
+            .price 2500 DKK
+        #field-11.space.property
+          .container
+            .color-bar.purple
+            .name.long-name Grupperummet
+            .price 750 DKK
+      #field-20.space.corner.free-parking
+        .container
+          .name Free
+          i.drawing.fa.fa-car
+          .name Parking
+      #field-21.row.horizontal-row.top-row
+        .space.property
+          .container
+            .color-bar.red
+            .name Herlev
+            .price 500 DKK
+        #field-22.space.chance
+          .container
+            .name Chance
+            i.drawing.fa.fa-question.blue
+        #field-23.space.property
+          .container
+            .color-bar.red
+            .name Hvidovre
+            .price 500 DKK
+        #field-24.space.property
+          .container
+            .color-bar.red
+            .name Oerslev
+            .price 500 DKK
+        #field-25.space.railroad
+          .container
+            .name Noerreport Station
+            i.drawing.fa.fa-subway
+            .price 2500 DKK
+        #field-26.space.property
+          .container
+            .color-bar.yellow
+            .name Valby
+            .price 600 DKK
+        #field-27.space.property
+          .container
+            .color-bar.yellow
+            .name Sydhavn
+            .price 650 DKK
+        #field-28.space.railroad
+          .container
+            .name 7A
+            i.drawing.fa.fa-tint
+            .price 2500 DKK
+        #field-29.space.property
+          .container
+            .color-bar.yellow
+            .name Noerrebro
+            .price 600 DKK
+      #field-30.space.corner.go-to-jail
+        .container
+          .name Go To
+          i.drawing.fa.fa-gavel
+          .name Jail
+      #field-31.row.vertical-row.right-row
+        .space.property
+          .container
+            .color-bar.green
+            .name Hellerup
+            .price 1500 DKK
+        #field-32.space.property
+          .container
+            .color-bar.green
+            .name.long-name Skodsborg
+            .price 1500 DKK
+        #field-33.space.chance
+          .container
+            .name Chance
+            i.drawing.fa.fa-question
+        #field-34.space.property
+          .container
+            .color-bar.green
+            .name.long-name Gentofte
+            .price 1500 DKK
+        #field-35.space.railroad
+          .container
+            .name.long-name Hovedbanegaarden
+            i.drawing.fa.fa-subway
+            .price 2500 DKK
+        #field-36.space.chance
+          .container
+            .name Chance
+            i.drawing.fa.fa-question
+        #field-37.space.property
+          .container
+            .color-bar.dark-blue
+            .name Strandvejen
+            .price 5500 DKK
+        #field-38.space.chance
+          .container
+            .name Chance
+            i.drawing.fa.fa-question
+        #field-39.space.property
+          .container
+            .color-bar.dark-blue
+            .name Amalienborg
+            .price 5000 DKK
+    if user
+      input(type="hidden", id="userID", value=user)
+    each player in players
+      input(type="hidden" class="playerNameHidden" value=player)
+  script(src="/../src/startGame.js")
+  script(src="src/chancecard.js") 
+  script(src="/../src/board.js")
+  script(src='src/playerMovement.js')
+  script(src="/../src/properties.js")
+  script(src='../src/player.js')
+  script(src="/../../src/chat.js")
+  script(src="/../src/playersInformation.js")
